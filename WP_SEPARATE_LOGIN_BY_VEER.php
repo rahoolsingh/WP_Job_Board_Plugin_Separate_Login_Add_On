@@ -2,7 +2,7 @@
 /*
 Plugin Name: WP_SEPARATE_LOGIN
 Description: Adds customizable and separate login forms for candidates and employers, tailored for job portals or websites requiring role-specific authentication. Includes shortcode support for easy integration.
-Version: 1.95.1
+Version: 1.95.2
 Author: Veer Rajpoot
 Author URI: https://x.com/i_veerrajpoot
 License: GPL v2 or later
@@ -100,7 +100,7 @@ function employer_login_shortcode() {
             // Check for the correct role
             if (!in_array('wp_job_board_pro_employer', $user->roles)) {
                 wp_logout(); // Log the user out immediately
-                $error_message = 'Error: Invalid Credentials. Please log in with valid Employer credentials.';
+                $error_message = 'Invalid Credentials. Please log in with valid Employer credentials.';
             } else {
                 wp_safe_redirect(home_url('/user-dashboard/'));
                 exit;
@@ -115,7 +115,7 @@ function employer_login_shortcode() {
             wp_safe_redirect(home_url('/user-dashboard/'));
             exit;
         } else {
-            echo '<div class="alert alert-danger">Error: Invalid Credentials. Please log in with valid Employer credentials. <a href="' . wp_logout_url(get_permalink()) . '">Try Again</a></div>';
+            echo '<div class="alert alert-danger">Invalid Credentials. Please log in with valid Employer credentials. <a href="' . wp_logout_url(get_permalink()) . '">Try Again</a></div>';
         }
     }
 
