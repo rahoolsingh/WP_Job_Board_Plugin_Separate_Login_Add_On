@@ -31,7 +31,7 @@ function candidate_login_shortcode() {
             // Check for the correct role
             if (!in_array('wp_job_board_pro_candidate', $user->roles)) {
                 wp_logout(); // Log the user out immediately
-                $error_message = 'Error: Invalid Credentials. Please log in with valid Candidate credentials.';
+                $error_message = 'Invalid Credentials. Please log in with valid Candidate credentials.';
             } else {
                 wp_safe_redirect(home_url('/user-dashboard/'));
                 exit;
@@ -46,7 +46,7 @@ function candidate_login_shortcode() {
             wp_safe_redirect(home_url('/user-dashboard/'));
             exit;
         } else {
-            echo '<div class="alert alert-danger">Error: Invalid Credentials. Please log in with valid Candidate credentials. <a href="' . wp_logout_url(get_permalink()) . '">Try Again</a></div>';
+            echo '<div class="alert alert-danger">Invalid Credentials. Please log in with valid Candidate credentials. <a href="' . wp_logout_url(get_permalink()) . '">Try Again</a></div>';
         }
     }
 
@@ -58,7 +58,7 @@ function candidate_login_shortcode() {
     ?>
     <form method="post" action="<?php echo esc_url(get_permalink()); ?>">
         <div class="form-group">
-            <label for="username">Candidate Username</label>
+            <label for="username">Jobseeker/Candidate Login</label>
             <input type="text" name="username" id="username" class="form-control" required>
         </div>
         <div class="form-group">
@@ -127,7 +127,7 @@ function employer_login_shortcode() {
     ?>
     <form method="post" action="<?php echo esc_url(get_permalink()); ?>">
         <div class="form-group">
-            <label for="username">Employer Username</label>
+            <label for="username">Employer Login</label>
             <input type="text" name="username" id="username" class="form-control" required>
         </div>
         <div class="form-group">
