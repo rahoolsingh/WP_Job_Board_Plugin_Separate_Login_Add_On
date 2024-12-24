@@ -1,6 +1,6 @@
 <?php
 /*
-Plugin Name: WP_SEPARATE_LOGIN
+Plugin Name: WP SEPARATE LOGIN
 Description: Adds customizable and separate login forms for candidates and employers, tailored for job portals or websites requiring role-specific authentication. Includes shortcode support for easy integration.
 Version: 1.95.2
 Author: Veer Rajpoot
@@ -59,11 +59,11 @@ function candidate_login_shortcode() {
     <form method="post" action="<?php echo esc_url(get_permalink()); ?>">
         <div class="form-group">
             <label for="username">Jobseeker/Candidate Login</label>
-            <input type="text" name="username" id="username" class="form-control" required>
+            <input type="text" name="username" id="username" class="form-control" placeholder="Enter your email" required>
         </div>
         <div class="form-group">
             <label for="password">Password</label>
-            <input type="password" name="password" id="password" class="form-control" required>
+            <input type="password" name="password" id="password" class="form-control" placeholder="Enter your password" required>
         </div>
         <div class="form-group">
             <label>
@@ -128,11 +128,11 @@ function employer_login_shortcode() {
     <form method="post" action="<?php echo esc_url(get_permalink()); ?>">
         <div class="form-group">
             <label for="username">Employer Login</label>
-            <input type="text" name="username" id="username" class="form-control" required>
+            <input type="text" name="username" id="username" class="form-control" placeholder="Enter your email" required>
         </div>
         <div class="form-group">
             <label for="password">Password</label>
-            <input type="password" name="password" id="password" class="form-control" required>
+            <input type="password" name="password" id="password" class="form-control" placeholder="Enter your password" required>
         </div>
         <div class="form-group">
             <label>
